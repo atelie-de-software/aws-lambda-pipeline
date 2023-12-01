@@ -5,7 +5,7 @@ phases:
         nodejs: 18
   build:
     commands:
-      - export BUCKET=spike-lambda-codepipeline
+      - export BUCKET=spike-lambda-pipeline
       - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
 artifacts:
   files:
